@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skyrim 服装移植到影之刃零"
+  short_description: "从 NIF、BodySlide 和贴图制作可独立装备的 PBZ 服装与换装选项"
+  default_prompt: "使用 $skyrim-to-pbz-outfit 移植这套 Skyrim SE 服装，核对前置、确定头部策略，并在材质烘焙后展示预览。"
