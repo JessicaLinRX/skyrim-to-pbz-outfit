@@ -23,7 +23,7 @@
 | OutfitFramework 运行包 | 本流程的独立外观与原生换装选项依赖此包。安装与开发包兼容的运行版，并按该版本发布页安装它所列的加载器、菜单或其他必需前置。核对游戏能正常启动且能打开换装界面。 |
 | PBZ 兼容 UE4SS | 使用 Lua 换色、脚底补偿、运行时姿势桥接等扩展时必需。若框架或加载器版本也要求 UE4SS，按其说明安装。核对游戏版本和实际脚本 API。 |
 | UUEPBS for PBZ | 可选体型滑块兼容。只在项目支持且玩家启用该功能时安装。 |
-| 头模或其他资源 Mod | 仅在成品保留指向该 Mod 的运行时引用时列为依赖。默认男主头部由 PBZ 本体提供。 |
+| 头模或其他资源 Mod | 仅在成品保留指向该 Mod 的运行时引用时列为依赖。明确选用的游戏原生头部由 PBZ 本体提供。 |
 | Mod 管理器 | 可选。若使用，先验证目标版本可以导入候选 ZIP；否则使用经验证的游戏相对路径手动安装。 |
 
 运行依赖的发布渠道见 [OutfitFramework](https://www.nexusmods.com/phantombladezero/mods/903) · [PBZ 兼容 UE4SS 发行包](https://github.com/KintaroModding/ue4ss/releases) · [UUEPBS for PBZ](https://www.nexusmods.com/phantombladezero/mods/622)

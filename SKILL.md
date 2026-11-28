@@ -1,6 +1,6 @@
 ---
 name: skyrim-to-pbz-outfit
-description: 将 Skyrim SE 的服装 Mod 移植到《影之刃零》（Phantom Blade Zero），从 NIF、BodySlide 和 DDS 开始制作可通过 OutfitFramework 独立装备的 PBZ 外观。用于整套移植和移植修复，涵盖蒙皮、可选头模、材质烘焙、换装选项、Cook 和 AIO 交付。
+description: 将 Skyrim SE 的服装 Mod 移植到《影之刃零》（Phantom Blade Zero），从 NIF、BodySlide 和 DDS 开始制作可通过 OutfitFramework 独立装备的 PBZ 外观。用于整套移植和移植修复，涵盖蒙皮、头模与颈部适配、材质烘焙、换装选项、Cook 和 AIO 交付。
 ---
 
 # Skyrim SE 服装移植到《影之刃零》
@@ -13,7 +13,7 @@ description: 将 Skyrim SE 的服装 Mod 移植到《影之刃零》（Phantom B
 
 搭建 FModel/CUE4Parse、带 PyNifly 和 UEFormat 插件的 Blender、与目标游戏及框架匹配的 Unreal Engine、OutfitFramework 开发包和运行包。按需求准备 BodySlide、图像工具、C++ 工具链和 PBZ 兼容 UE4SS。先验证能读取一套游戏主角资产、打开框架工程，再进入制作。[软件与前置](references/setup.md)
 
-开发者提供头模时使用该头模，记录对应发型、眉睫、面部与材质依赖。未提供时说明源服装缺少独立头模，成品默认渲染 PBZ 原版男主的头模，按当前框架明确绑定游戏原生发型条目。开发者希望另换但没有选型时，可推荐 SoulVerR（Soul Ver.R）作为可选来源，采用前核对资产适配和使用权限。[头部策略与颈部](references/head-and-neck.md)
+先查看源服装与配套身体模型，确认目标角色体型。明确为女性服装的项目需要匹配的女性头模。用户未提供时，说明需要其提供或确认一个可用的女性头模。先继续几何和材质准备，待头模确认后再完成接颈和外观注册。使用用户提供或确认的头模，并核对配套发型、面部及材质依赖。[头部策略与颈部](references/head-and-neck.md)
 
 ## 制作与验收
 

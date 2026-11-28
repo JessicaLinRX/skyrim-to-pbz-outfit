@@ -5,7 +5,7 @@
 1. 确认当前开发插件和运行包支持相同的表结构。开发包可查看 `PBZOutfitMod.h/.cpp` 与 `PBZAppearanceStruct.h`，运行侧可用 FModel 检查框架复合表和换装控件。挑选未占用的 slot，检查该值在运行包范围内，也不与常用依赖或已装 Mod 冲突。发布后保持 slot、Mod ID 和行名稳定。已知版本使用 `1000 + slot` 作为 chunk，按实际版本核对。
 2. 在开发包的 Outfit Mod 工具内填写 ModName、OutfitName、图标和 BodyMesh，设置头部策略后运行 Write Mod。已知版本的 Body 网格要求有效 Physics Asset、LOD0 开启 Allow CPU Access、`UpperBody` 和 `Mesh` 两个 Sampling Regions，以及游戏骨架或列有游戏骨架的 Compatible Skeletons。按 FModel 导出的原网格配置构建 sampling regions 并保存，核对游戏使用的 sockets 和公共骨。以当前框架的实际检查项为准，处理 Write Mod 返回的错误。
 3. 验证 `/Game/Mods/PBZOutfitSlots/DT_OutfitSlot_<slot>` 以及候选的行引用。Body 行的 `BodyMeshAsset` 指向目标网格，Outfit 行通过 `OutfitBodyItem` 引用 Body 行。检查独立名称、解锁状态及图标。所有自建资产归到 `/Game/Mods/<ModId>/...` 或框架指定的自有路径。
-4. 使用原版头部时，填写当前男主的原版 `GameHairstyle`，回读普通和过场引用。使用开发者提供的头模时，验证普通与过场 Outfit 的 `OutfitHairStyleItem`、`OutfitSequenceHairStyleItem` 对应到私有 Hairstyle 行的 `HeadAsset` 与必要的头发资源，按需绑定 `OutfitBrowLashCardItem`。[头部选择](head-and-neck.md)
+4. 项目明确选择原版男主头部时，填写对应的 `GameHairstyle`，回读普通和过场引用。使用开发者提供或确认的自定义头模时，验证普通与过场 Outfit 的 `OutfitHairStyleItem`、`OutfitSequenceHairStyleItem` 对应到私有 Hairstyle 行的 `HeadAsset` 与必要的头发资源，按需绑定 `OutfitBrowLashCardItem`。[头部选择](head-and-neck.md)
 
 一个 Body 网格适合基础外观。确实需要多组件和独立 AnimBP 时，可用 Body 行提供主姿势，另建 Neck 行，将其 `NeckAsset` 指向可见服装网格，并从 Outfit 行通过 `OutfitNeckItem` 引用。在目标游戏里确认生成的真实服装组件和动画来源。用 `ClothMeshAsset` 或 `BodyClothDataArray` 时分别核对它们期待的资产类型与运行时挂载。
 
